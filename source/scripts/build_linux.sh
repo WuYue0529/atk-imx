@@ -4,13 +4,14 @@ cd ../linux/linux-imx-rel_imx_4.1.15_2.1.0_ga
 dir=$(pwd)
 echo "Enter linux src dir : ${dir}"
 
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- clean
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- clean
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- imx_alientek_emmc_defconfig
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4
 
 # copy for tftp download
 cp arch/arm/boot/zImage ../../../image/ -f
-cp arch/arm/boot/dts/imx6ull-14x14-evk.dtb ../../../image/imx6ull-alientek-emmc.dtb -f
+cp arch/arm/boot/dts/imx6ull-alientek-emmc.dtb ../../../image/ -f
 ls -al ../../../image/
 
 
