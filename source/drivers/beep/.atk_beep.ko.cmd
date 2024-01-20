@@ -1,0 +1,1 @@
+cmd_/home/zk/imx/source/drivers/beep/atk_beep.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /home/zk/imx/source/drivers/beep/atk_beep.ko /home/zk/imx/source/drivers/beep/atk_beep.o /home/zk/imx/source/drivers/beep/atk_beep.mod.o

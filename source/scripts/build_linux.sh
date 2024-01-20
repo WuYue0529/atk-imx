@@ -5,7 +5,7 @@ dir=$(pwd)
 echo "Enter linux src dir : ${dir}"
 
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- clean
-make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- imx_alientek_emmc_defconfig
+# make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- imx_alientek_emmc_defconfig
 # make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
 make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4
 

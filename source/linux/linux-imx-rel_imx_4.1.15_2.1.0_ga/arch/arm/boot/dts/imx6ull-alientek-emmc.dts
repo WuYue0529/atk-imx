@@ -145,6 +145,15 @@
 			spi-max-frequency = <100000>;
 		};
 	};
+	beep {
+		#address-cells = <1>;
+		#size-cells = <1>;
+		compatible = "imx6ul-beep";
+		pinctrl-names = "default";
+		pinctrl-0 = <&pinctrl_beep>;
+		beep-gpio = <&gpio5 1 GPIO_ACTIVE_HIGH>;
+		status = "okay";
+	};
 };
 
 &cpu0 {
@@ -559,6 +568,12 @@
 		pinctrl_wdog: wdoggrp {
 			fsl,pins = <
 				MX6UL_PAD_LCD_RESET__WDOG1_WDOG_ANY    0x30b0
+			>;
+		};
+
+		pinctrl_beep: beep_grp {
+			fsl,pins = <
+				MX6UL_PAD_SNVS_TAMPER1__GPIO5_IO01	0x10B0
 			>;
 		};
 	};
