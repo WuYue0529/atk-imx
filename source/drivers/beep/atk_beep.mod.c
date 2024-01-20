@@ -37,6 +37,7 @@ __attribute__((section("__versions"))) = {
 	{ 0xd9285795, __VMLINUX_SYMBOL_STR(misc_deregister) },
 	{ 0x6f0036d9, __VMLINUX_SYMBOL_STR(del_timer_sync) },
 	{ 0xfe990052, __VMLINUX_SYMBOL_STR(gpio_free) },
+	{ 0x67c2fa54, __VMLINUX_SYMBOL_STR(__copy_to_user) },
 	{ 0x389329b3, __VMLINUX_SYMBOL_STR(gpiod_set_raw_value) },
 	{ 0x3089e8ae, __VMLINUX_SYMBOL_STR(gpio_to_desc) },
 	{ 0xefd6cf06, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr0) },
@@ -49,4 +50,4 @@ __attribute__((section(".modinfo"))) =
 "depends=";
 
 
-MODULE_INFO(srcversion, "CFEA49511556EBA64C8FCF6");
+MODULE_INFO(srcversion, "0BF965C2FF5716D5CC24862");

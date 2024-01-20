@@ -22,6 +22,9 @@
 
 
 #define DRIVER_NAME	"atkeep"
+#define CLOSE_CMD 		(_IO(0XEF, 0x1))	/* 关闭beep */
+#define OPEN_CMD		(_IO(0XEF, 0x2))	/* 打开beep */
+#define GET_GPIO_CMD    _IOWR(0XEF, 0x3, unsigned int)
 
 struct misc_beep
 {
@@ -77,10 +80,36 @@ static ssize_t miscbeep_write(struct file *filp, const char __user *buf, size_t 
 	return 0;
 }
 
+static long beep_unlocked_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)
+{
+	struct misc_beep *atk_beep  = (struct misc_beep *)filp->private_data;
+	pr_info("%s : get memy %p\n", __func__, atk_beep);
+	switch (cmd) {
+		case CLOSE_CMD:
+			gpio_set_value(atk_beep->beep_gpio, 1);
+			break;
+
+		case OPEN_CMD:
+			gpio_set_value(atk_beep->beep_gpio, 0);
+			break;
+
+		case GET_GPIO_CMD:
+			if (0 != copy_to_user((unsigned int __user *)arg, &atk_beep->beep_gpio, sizeof(int)))
+			{
+            	return -EFAULT;  // 如果复制失败，返回错误码
+            }
+            break;
+		default:
+        	return -ENOTTY;
+	}
+	return 0;
+}
+
 static const struct file_operations atk_beep_fops = {
 	.owner		= THIS_MODULE,
 	.open = miscbeep_open,
 	.write = miscbeep_write,
+	.unlocked_ioctl = beep_unlocked_ioctl,
 };
 
 static struct miscdevice atk_beep_miscdev = {
