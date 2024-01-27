@@ -1,8 +1,8 @@
-cmd_/home/zk/imx/source/drivers/beep/atk_beep.o := arm-linux-gnueabihf-gcc -Wp,-MD,/home/zk/imx/source/drivers/beep/.atk_beep.o.d  -nostdinc -isystem /home/zk/imx/toolchain/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/include -I./arch/arm/include -Iarch/arm/include/generated/uapi -Iarch/arm/include/generated  -Iinclude -I./arch/arm/include/uapi -Iarch/arm/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=6 -march=armv6k -mtune=arm1136j-s -msoft-float -Uarm -fno-delete-null-pointer-checks -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(atk_beep)"  -D"KBUILD_MODNAME=KBUILD_STR(atk_beep)" -c -o /home/zk/imx/source/drivers/beep/.tmp_atk_beep.o /home/zk/imx/source/drivers/beep/atk_beep.c
+cmd_/home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.o := arm-linux-gnueabihf-gcc -Wp,-MD,/home/zk/imx/atk-imx6ull/source/drivers/beep/.atk_beep.o.d  -nostdinc -isystem /home/zk/imx/atk-imx6ull/toolchain/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/4.9.4/include -I./arch/arm/include -Iarch/arm/include/generated/uapi -Iarch/arm/include/generated  -Iinclude -I./arch/arm/include/uapi -Iarch/arm/include/generated/uapi -I./include/uapi -Iinclude/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=6 -march=armv6k -mtune=arm1136j-s -msoft-float -Uarm -fno-delete-null-pointer-checks -O2 --param=allow-store-data-races=0 -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -fomit-frame-pointer -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -DCC_HAVE_ASM_GOTO  -DMODULE  -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(atk_beep)"  -D"KBUILD_MODNAME=KBUILD_STR(atk_beep)" -c -o /home/zk/imx/atk-imx6ull/source/drivers/beep/.tmp_atk_beep.o /home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.c
 
-source_/home/zk/imx/source/drivers/beep/atk_beep.o := /home/zk/imx/source/drivers/beep/atk_beep.c
+source_/home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.o := /home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.c
 
-deps_/home/zk/imx/source/drivers/beep/atk_beep.o := \
+deps_/home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.o := \
   include/linux/of_gpio.h \
     $(wildcard include/config/of/gpio.h) \
   include/linux/compiler.h \
@@ -40,7 +40,7 @@ deps_/home/zk/imx/source/drivers/beep/atk_beep.o := \
     $(wildcard include/config/ring/buffer.h) \
     $(wildcard include/config/tracing.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-  /home/zk/imx/toolchain/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.4/include/stdarg.h \
+  /home/zk/imx/atk-imx6ull/toolchain/gcc-linaro-4.9.4-2017.01-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/4.9.4/include/stdarg.h \
   include/linux/linkage.h \
   include/linux/stringify.h \
   include/linux/export.h \
@@ -597,6 +597,6 @@ deps_/home/zk/imx/source/drivers/beep/atk_beep.o := \
     $(wildcard include/config/arch/omap.h) \
   include/linux/pm_wakeup.h \
 
-/home/zk/imx/source/drivers/beep/atk_beep.o: $(deps_/home/zk/imx/source/drivers/beep/atk_beep.o)
+/home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.o: $(deps_/home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.o)
 
-$(deps_/home/zk/imx/source/drivers/beep/atk_beep.o):
+$(deps_/home/zk/imx/atk-imx6ull/source/drivers/beep/atk_beep.o):
